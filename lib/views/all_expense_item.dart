@@ -27,8 +27,8 @@ class HeaderExItem extends StatelessWidget {
     return Row(
       children: [
         Container(
-          width: 65,
-          height: 65,
+          width: 60,
+          height: 60,
           decoration: ShapeDecoration(
               shape: const OvalBorder(), color: backcolor ?? Color(0xFFF1F1F1)
               // color: Color.fromARGB(255, 241, 238, 238),

@@ -9,7 +9,7 @@ class AdaptiveUi extends StatelessWidget {
      // print('layout : ${constraints.maxWidth}');
       if (constraints.maxWidth <= 500) {
         return mobile(context);
-      } else if (constraints.maxWidth <= 900) {
+      } else if (constraints.maxWidth <= 800) {
         return tablet(context);
       } else {
         return desktop(context);

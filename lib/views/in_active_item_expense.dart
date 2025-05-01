@@ -12,7 +12,7 @@ class InActiveItemExpense extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(
         horizontal: 20,
-        vertical: 16,
+        vertical: 10,
       ),
       decoration: ShapeDecoration(
         color: Colors.white,
@@ -29,11 +29,11 @@ class InActiveItemExpense extends StatelessWidget {
              backcolor: Color.fromARGB(255, 241, 238, 238),
             image: model.image,
           ),
-        const  SizedBox(height: 34,),
+        const  SizedBox(height: 20,),
           Text(model.title,style: Style.styleSemiBold16,),
         const  SizedBox(height: 8,),
           Text(model.data,style: Style.styleRegular14,),
-        const  SizedBox(height: 12,),
+        const  SizedBox(height: 10,),
           Text(model.price,style: Style.styleSemiBold24,)
         ],
       ),
@@ -50,7 +50,7 @@ class ActiveItemExpense extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(
         horizontal: 20,
-        vertical: 16,
+        vertical: 10,
       ),
       decoration: ShapeDecoration(
         color: Color(0xFF4EB7F2),
@@ -69,11 +69,11 @@ class ActiveItemExpense extends StatelessWidget {
             imagecolor: Colors.white,
             image: model.image,
           ),
-        const  SizedBox(height: 34,),
+        const  SizedBox(height: 20,),
           Text(model.title,style: Style.styleSemiBold16.copyWith(color: Colors.white),),
         const  SizedBox(height: 8,),
           Text(model.data,style: Style.styleRegular14.copyWith(color: Color(0xFFFAFAFA)),),
-        const  SizedBox(height: 12,),
+        const  SizedBox(height: 10,),
           Text(model.price,style: Style.styleSemiBold24.copyWith(color: Colors.white),)
         ],
       ),

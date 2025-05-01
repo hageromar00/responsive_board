@@ -42,6 +42,10 @@ class Assets {
   /// assets/images/logout.svg
   static const String imagesLogout = "assets/images/logout.svg";
 
+  /// Assets for imagesMaskgroup
+  /// assets/images/Maskgroup.png
+  static const String imagesMaskgroup = "assets/images/Maskgroup.png";
+
   /// Assets for imagesMoneys
   /// assets/images/moneys.svg
   static const String imagesMoneys = "assets/images/moneys.svg";

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rep_application/model/drawer_item.dart';
+import 'package:rep_application/model/user_info_model.dart';
 import 'package:rep_application/utils/app_images.dart';
 import 'package:rep_application/utils/style.dart';
 import 'package:rep_application/views/drawer_item.dart';
@@ -19,9 +20,15 @@ class CustomDrawer extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(
             child: UserInfoListTile(
-                image: Assets.imagesFrame2,
-                titl: 'Lekan Okeowo',
-                subtitl: 'demo@gmail.com'),
+              model: UserInfoModel(
+                  image: Assets.imagesFrame2,
+                  title: 'Lekan Okeowo',
+                  subtitl: 'demo@gmail.com'),
+
+              // image: Assets.imagesFrame2,
+              // titl: 'Lekan Okeowo',
+              // subtitl: 'demo@gmail.com'
+            ),
           ),
           SliverToBoxAdapter(
             child: SizedBox(
@@ -67,12 +74,12 @@ class CustomDrawer extends StatelessWidget {
 //         inActiveDrawer(model: ItemModel(image: Assets.imagesLogout, title: 'Logout account'),),
 //         SizedBox(height: 48,)
 class UserInfoListTile extends StatelessWidget {
-  const UserInfoListTile(
-      {super.key,
-      required this.image,
-      required this.titl,
-      required this.subtitl});
-  final String image, titl, subtitl;
+  const UserInfoListTile({
+    super.key,
+    required this.model,
+  });
+
+  final UserInfoModel model;
 
   @override
   Widget build(BuildContext context) {
@@ -80,12 +87,12 @@ class UserInfoListTile extends StatelessWidget {
       color: Color(0xFFFAFAFA),
       elevation: 0,
       child: ListTile(
-        leading: SvgPicture.asset(image),
+        leading: SvgPicture.asset(model.image),
         title: Text(
-          titl,
+          model.title,
           style: Style.styleSemiBold16,
         ),
-        subtitle: Text(subtitl, style: Style.styleRegular12),
+        subtitle: Text(model.subtitl, style: Style.styleRegular12),
       ),
     );
   }
